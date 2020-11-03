@@ -1,89 +1,65 @@
-import L_HTML5 from "../assets/img/skills/html-5.svg";
-import L_CSS3 from "../assets/img/skills/css3.svg";
-import L_SASS from "../assets/img/skills/sass-1.svg";
-import L_BOOTSTRAP from "../assets/img/skills/bootstrap-4.svg";
-import L_REACT from "../assets/img/skills/react.svg";
-import L_REDUX from "../assets/img/skills/redux.svg";
-import L_FLUX from "../assets/img/skills/flux.svg";
-import L_ANGULAR from "../assets/img/skills/angular.svg";
 // import L_REACT_ROUTER from "../assets/img/skills/react-router.svg";
-import L_MATERIALUI from "../assets/img/skills/material-ui-1.svg";
-import L_REACT_BOOTSTRAP from "../assets/img/skills/react-bootstrap.svg";
-import L_STYLED_COMPONENTS from "../assets/img/skills/styled-components.svg";
-import L_NODE_JS from "../assets/img/skills/nodejs.svg";
-import L_EXPRESS from "../assets/img/skills/express.svg";
 // import L_DJANGO from "../assets/img/skills/django.svg";
-import L_MONGODB from "../assets/img/skills/mongodb.svg";
-import L_MYSQL from "../assets/img/skills/mysql.svg";
-import L_GIT from "../assets/img/skills/git-icon.svg";
-import L_HEROKU from "../assets/img/skills/heroku.svg";
-import L_FIREBASE from "../assets/img/skills/firebase.svg";
 // import L_GITHUB_PAGES from "../assets/img/skills/github.svg";
-import L_JAVASCRIPT from "../assets/img/skills/javascript.svg";
-import L_TYPESCRIPT from "../assets/img/skills/typescript.svg";
 // import L_PYTHON from "../assets/img/skills/python.svg";
-import L_JEST from "../assets/img/skills/jest.png";
-import L_JASMINE from "../assets/img/skills/jasmine.png";
-import L_MOCHA from "../assets/img/skills/mocha.svg";
-import L_KARMA from "../assets/img/skills/karma.svg";
-import L_CHAI from "../assets/img/skills/chai.png";
-import L_SINON from "../assets/img/skills/sinon.png";
+
+import * as L_IMG from "../assets/img/skills/index";
 
 export const skills = {
   frontend: [
     {
       link: "https://en.wikipedia.org/wiki/HTML5",
       imgAltText: "HTML 5",
-      imgSrc: L_HTML5,
+      imgSrc: L_IMG.L_HTML5,
       skillName: "HTML5",
     },
     {
       link:
         "https://medium.com/beginners-guide-to-mobile-web-development/whats-new-in-css-3-dcd7fa6122e1",
       imgAltText: "CSS 3",
-      imgSrc: L_CSS3,
+      imgSrc: L_IMG.L_CSS3,
       skillName: "CSS3",
     },
     {
       link: "https://www.javascript.com/",
       imgAltText: "JavaScript",
-      imgSrc: L_JAVASCRIPT,
+      imgSrc: L_IMG.L_JAVASCRIPT,
       skillName: "JavaScript",
     },
     {
       link: "https://sass-lang.com/",
       imgAltText: "Sass",
-      imgSrc: L_SASS,
+      imgSrc: L_IMG.L_SASS,
       skillName: "Sass",
     },
     {
       link: "https://getbootstrap.com/",
       imgAltText: "Bootstrap",
-      imgSrc: L_BOOTSTRAP,
+      imgSrc: L_IMG.L_BOOTSTRAP,
       skillName: "Bootstrap",
     },
     {
       link: "https://reactjs.org/",
       imgAltText: "React JS",
-      imgSrc: L_REACT,
+      imgSrc: L_IMG.L_REACT,
       skillName: "React JS",
     },
     {
       link: "https://facebook.github.io/flux/",
       imgAltText: "Flux",
-      imgSrc: L_FLUX,
+      imgSrc: L_IMG.L_FLUX,
       skillName: "Flux",
     },
     {
       link: "https://redux.js.org/",
       imgAltText: "Redux",
-      imgSrc: L_REDUX,
+      imgSrc: L_IMG.L_REDUX,
       skillName: "Redux",
     },
     {
       link: "https://angular.io/",
       imgAltText: "Angular",
-      imgSrc: L_ANGULAR,
+      imgSrc: L_IMG.L_ANGULAR,
       skillName: "Angular",
     },
     /*     {
@@ -95,19 +71,19 @@ export const skills = {
     {
       link: "https://material-ui.com/",
       imgAltText: "Material-UI",
-      imgSrc: L_MATERIALUI,
+      imgSrc: L_IMG.L_MATERIALUI,
       skillName: "Material-UI",
     },
     {
       link: "https://react-bootstrap.github.io/",
       imgAltText: "React Bootstrap",
-      imgSrc: L_REACT_BOOTSTRAP,
+      imgSrc: L_IMG.L_REACT_BOOTSTRAP,
       skillName: "React Bootstrap",
     },
     {
       link: "https://styled-components.com/",
       imgAltText: "styled-components",
-      imgSrc: L_STYLED_COMPONENTS,
+      imgSrc: L_IMG.L_STYLED_COMPONENTS,
       skillName: "styled-components",
     },
   ],
@@ -116,13 +92,13 @@ export const skills = {
     {
       link: "https://nodejs.org/en/",
       imgAltText: "Node.js",
-      imgSrc: L_NODE_JS,
+      imgSrc: L_IMG.L_NODE_JS,
       skillName: "Node.js",
     },
     {
       link: "https://expressjs.com/",
       imgAltText: "Express",
-      imgSrc: L_EXPRESS,
+      imgSrc: L_IMG.L_EXPRESS,
       skillName: "Express",
     },
     /*     {
@@ -142,13 +118,13 @@ export const skills = {
     {
       link: "https://www.heroku.com/",
       imgAltText: "Heroku",
-      imgSrc: L_HEROKU,
+      imgSrc: L_IMG.L_HEROKU,
       skillName: "Heroku",
     },
     {
       link: "https://firebase.google.com/?hl=es",
       imgAltText: "Firebase",
-      imgSrc: L_FIREBASE,
+      imgSrc: L_IMG.L_FIREBASE,
       skillName: "Firebase",
     },
     /*     {
@@ -162,13 +138,13 @@ export const skills = {
     {
       link: "https://www.javascript.com/",
       imgAltText: "JavaScript",
-      imgSrc: L_JAVASCRIPT,
+      imgSrc: L_IMG.L_JAVASCRIPT,
       skillName: "JavaScript",
     },
     {
       link: "https://www.typescriptlang.org/",
       imgAltText: "TypeScript",
-      imgSrc: L_TYPESCRIPT,
+      imgSrc: L_IMG.L_TYPESCRIPT,
       skillName: "TypeScript",
     },
     /*     {
@@ -194,13 +170,13 @@ export const skills = {
     {
       link: "https://www.mysql.com/",
       imgAltText: "MySQL",
-      imgSrc: L_MYSQL,
+      imgSrc: L_IMG.L_MYSQL,
       skillName: "MySQL",
     },
     {
       link: "https://www.mongodb.com/",
       imgAltText: "MongoDB",
-      imgSrc: L_MONGODB,
+      imgSrc: L_IMG.L_MONGODB,
       skillName: "MongoDB",
     },
   ],
@@ -208,37 +184,37 @@ export const skills = {
     {
       link: "https://jestjs.io/",
       imgAltText: "Jest",
-      imgSrc: L_JEST,
+      imgSrc: L_IMG.L_JEST,
       skillName: "Jest",
     },
     {
       link: "https://jasmine.github.io/",
       imgAltText: "Jasmine",
-      imgSrc: L_JASMINE,
+      imgSrc: L_IMG.L_JASMINE,
       skillName: "Jasmine",
     },
     {
       link: "https://www.chaijs.com/",
       imgAltText: "Chai",
-      imgSrc: L_CHAI,
+      imgSrc: L_IMG.L_CHAI,
       skillName: "Chai",
     },
     {
       link: "https://sinonjs.org/releases/v1.17.7/",
       imgAltText: "Sinon",
-      imgSrc: L_SINON,
+      imgSrc: L_IMG.L_SINON,
       skillName: "Sinon",
     },
     {
       link: "https://mochajs.org/",
       imgAltText: "Mocha",
-      imgSrc: L_MOCHA,
+      imgSrc: L_IMG.L_MOCHA,
       skillName: "Mocha",
     },
     {
       link: "https://karma-runner.github.io/5.2/index.html",
       imgAltText: "Karma",
-      imgSrc: L_KARMA,
+      imgSrc: L_IMG.L_KARMA,
       skillName: "Karma",
     },
   ],
@@ -246,7 +222,7 @@ export const skills = {
     {
       link: "https://git-scm.com/",
       imgAltText: "GIT",
-      imgSrc: L_GIT,
+      imgSrc: L_IMG.L_GIT,
       skillName: "GIT",
     },
   ],

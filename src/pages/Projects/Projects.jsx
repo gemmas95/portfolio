@@ -9,6 +9,8 @@ import { projectsList } from "../../data/projects.data";
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
 
+import "./Projects.css";
+
 function ContextAwareToggle({ children, eventKey, callback }) {
   const currentEventKey = useContext(AccordionContext);
 
@@ -33,11 +35,11 @@ function Projects() {
   return (
     <div className="pt-3 pb-3" id="projects">
       <h1 className="text-center">Projects</h1>
-      <div className="justify-content-center d-flex flex-wrap">
-        {projectsList.map((project) => {
+      <div className="justify-content-center d-flex flex-wrap align-items-center">
+        {projectsList.map((project, index) => {
           return (
-            <Accordion defaultActiveKey="1">
-              <Card style={{ width: "25em" }} className="mb-2 m-5">
+            <Accordion defaultActiveKey="1" key={index}>
+              <Card style={{ width: "25em" }} className="mb-2 m-5 p-2">
                 <Card.Header className="text-center">
                   {project.title}
                 </Card.Header>
@@ -47,11 +49,8 @@ function Projects() {
                   src={project.imgSrc}
                   alt={project.imgAltText}
                 />
-                <Card.Body>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
+                <Card.Body className="">
+                  <Card.Text>{project.description}</Card.Text>
                 </Card.Body>
                 <div className="d-flex justify-content-center mb-4">
                   <ContextAwareToggle eventKey="0">
@@ -60,12 +59,29 @@ function Projects() {
                 </div>
                 <Accordion.Collapse eventKey="0">
                   <Card.Body>
-                    Hello! I'm the body
-                    <a href={`${project.link}`}>
-                      <Button className="m-2" variant="outline-success">
-                        GitHub
-                      </Button>
-                    </a>
+                    <span>Tech Stack:</span>
+                    <ul className="p-1 d-flex justify-content-center align-items-center flex-wrap">
+                      {project.tech_stack.map((tech, index) => {
+                        return (
+                          <li className="list_no_dot" key={index}>
+                            <img
+                              src={tech}
+                              alt="tech"
+                              className="little_black_and_white_logo"
+                            />
+                          </li>
+                        );
+                      })}
+                    </ul>
+                    <div className="d-flex justify-content-center">
+                      {Object.keys(project.links).map((key, i) => (
+                        <a href={`${project.links[key]}`} key={i}>
+                          <Button className="m-2" variant="outline-success">
+                            {key}
+                          </Button>
+                        </a>
+                      ))}
+                    </div>
                   </Card.Body>
                 </Accordion.Collapse>
               </Card>

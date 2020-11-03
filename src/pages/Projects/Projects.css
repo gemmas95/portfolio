@@ -1,0 +1,13 @@
+.little_black_and_white_logo {
+  width: 40px;
+  /* filter: grayscale(100%) brightness(90%); */
+}
+
+.list_no_dot {
+  list-style-type: none;
+  display: inline;
+  margin: 5px;
+}
+span {
+  font-weight: bold;
+}
