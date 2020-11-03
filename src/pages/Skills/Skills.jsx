@@ -14,10 +14,10 @@ const Skills = () => {
       <h1 className="text-center font-details-b pb-4 white__title">
         Tech Skills
       </h1>
-      <CardDeck className="justify-content-center d-flex">
+      <CardDeck className="justify-content-center d-flex cards__container">
         <Row>
           {/* Frontend */}
-          <Col md={4}>
+          <Col lg={4}>
             <Card className="focus mt-2 mb-2">
               <Card.Body>
                 {/* Frontend */}
@@ -50,7 +50,7 @@ const Skills = () => {
           </Col>
 
           {/* Backend */}
-          <Col md={4}>
+          <Col lg={4}>
             <Card className="focus mt-2 mb-2">
               <Card.Body>
                 <Card.Title className="text-center  card-title">
@@ -140,7 +140,7 @@ const Skills = () => {
             </Card>
           </Col>
 
-          <Col md={4}>
+          <Col lg={4}>
             {/* Testing Frameworks */}
             <Card className="focus mt-2 mb-2 ">
               <Card.Body>

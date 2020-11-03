@@ -61,7 +61,10 @@ function Projects() {
           {projectsList.map((project, index) => {
             return (
               <Accordion defaultActiveKey="1" key={index}>
-                <Card style={{ width: "25em" }} className="focus mb-2 m-5 p-2">
+                <Card
+                  style={{ "max-width": "25em" }}
+                  className="focus mb-2 m-5 p-2"
+                >
                   <Card.Header className="text-center">
                     {project.title}
                   </Card.Header>

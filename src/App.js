@@ -18,7 +18,7 @@ import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
-    <div>
+    <div className="mainContainer">
       <MyNavbar />
       <MyCarrousel />
       <Particles
@@ -35,6 +35,7 @@ const App = () => {
         {/* </Parallax> */}
       </div>
       <Skills />
+
       <Projects />
       <hr />
       <Container className="container-box rounded">

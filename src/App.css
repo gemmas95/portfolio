@@ -27,3 +27,7 @@ hr {
 .contact__background {
   background-color: #101018f8;
 }
+
+.mainContainer {
+  overflow-x: hidden;
+}

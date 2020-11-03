@@ -39,3 +39,8 @@
 .white__title {
   color: white;
 }
+
+.cards__container {
+  flex-wrap: wrap;
+  margin: 5px;
+}
