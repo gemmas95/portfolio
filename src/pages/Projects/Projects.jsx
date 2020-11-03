@@ -3,6 +3,7 @@ import { useAccordionToggle } from "react-bootstrap/AccordionToggle";
 import AccordionContext from "react-bootstrap/AccordionContext";
 import Button from "react-bootstrap/Button";
 import { projectsList } from "../../data/projects.data";
+import Fade from "react-reveal/Fade";
 
 // import I_CALCULATOR from "../../assets/img/projects/previews/calculator_preview.png";
 
@@ -36,66 +37,60 @@ function Projects() {
     <div className="pt-3 pb-3" id="projects">
       <h1 className="text-center">Projects</h1>
       <div className="justify-content-center d-flex flex-wrap align-items-center">
-        {projectsList.map((project, index) => {
-          return (
-            <Accordion defaultActiveKey="1" key={index}>
-              <Card style={{ width: "25em" }} className="mb-2 m-5 p-2">
-                <Card.Header className="text-center">
-                  {project.title}
-                </Card.Header>
-                <Card.Img
-                  variant="top"
-                  height="200px"
-                  src={project.imgSrc}
-                  alt={project.imgAltText}
-                />
-                <Card.Body className="">
-                  <Card.Text>{project.description}</Card.Text>
-                </Card.Body>
-                <div className="d-flex justify-content-center mb-4">
-                  <ContextAwareToggle eventKey="0">
-                    Show more!
-                  </ContextAwareToggle>
-                </div>
-                <Accordion.Collapse eventKey="0">
-                  <Card.Body>
-                    <span>Tech Stack:</span>
-                    <ul className="p-1 d-flex justify-content-center align-items-center flex-wrap">
-                      {project.tech_stack.map((tech, index) => {
-                        return (
-                          <li className="list_no_dot" key={index}>
-                            <img
-                              src={tech}
-                              alt="tech"
-                              className="little_black_and_white_logo"
-                            />
-                          </li>
-                        );
-                      })}
-                    </ul>
-                    <div className="d-flex justify-content-center">
-                      {Object.keys(project.links).map((key, i) => (
-                        <a href={`${project.links[key]}`} key={i}>
-                          <Button className="m-2" variant="outline-success">
-                            {key}
-                          </Button>
-                        </a>
-                      ))}
-                    </div>
+        <Fade left cascade>
+          {projectsList.map((project, index) => {
+            return (
+              <Accordion defaultActiveKey="1" key={index}>
+                <Card style={{ width: "25em" }} className="focus mb-2 m-5 p-2">
+                  <Card.Header className="text-center">
+                    {project.title}
+                  </Card.Header>
+                  <Card.Img
+                    variant="top"
+                    height="200px"
+                    src={project.imgSrc}
+                    alt={project.imgAltText}
+                  />
+                  <Card.Body className="">
+                    <Card.Text>{project.description}</Card.Text>
                   </Card.Body>
-                </Accordion.Collapse>
-              </Card>
-            </Accordion>
-          );
-        })}
-        {/* <Card>
-          <Card.Header>
-            <ContextAwareToggle eventKey="1">Click me!</ContextAwareToggle>
-          </Card.Header>
-          <Accordion.Collapse eventKey="1">
-            <Card.Body>Hello! I'm another body</Card.Body>
-          </Accordion.Collapse>
-        </Card> */}
+                  <div className="d-flex justify-content-center mb-4">
+                    <ContextAwareToggle eventKey="0">
+                      Show more!
+                    </ContextAwareToggle>
+                  </div>
+                  <Accordion.Collapse eventKey="0">
+                    <Card.Body>
+                      <span className="bold">Tech Stack:</span>
+                      <ul className="p-1 d-flex justify-content-center align-items-center flex-wrap">
+                        {project.tech_stack.map((tech, index) => {
+                          return (
+                            <li className="list_no_dot" key={`tech_${index}`}>
+                              <img
+                                src={tech}
+                                alt="tech"
+                                className="little_logo"
+                              />
+                            </li>
+                          );
+                        })}
+                      </ul>
+                      <div className="d-flex justify-content-center">
+                        {Object.keys(project.links).map((key, i) => (
+                          <a href={`${project.links[key]}`} key={i}>
+                            <Button className="m-2" variant="outline-success">
+                              {key}
+                            </Button>
+                          </a>
+                        ))}
+                      </div>
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Card>
+              </Accordion>
+            );
+          })}
+        </Fade>
       </div>
     </div>
   );

@@ -27,7 +27,7 @@ export const projectsList = [
       STACK_IMG.L_SINON,
     ],
     description:
-      "FullStack sports web application full responsive, where users can find and subscribe to those acivities that centers post",
+      "FullStack sports web application, where users can subscribe to centers' acivities",
   },
   {
     links: {
@@ -39,7 +39,7 @@ export const projectsList = [
     title: "Organic Market Project",
     tech_stack: [STACK_IMG.L_NODE_JS, STACK_IMG.L_EXPRESS, STACK_IMG.L_MONGODB],
     description:
-      "Server Side web application using EJS with all the CRUD where a user can buy organic products",
+      "Server Side web application using EJS where a user can buy organic products",
   },
   {
     links: {

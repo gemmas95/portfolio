@@ -48,7 +48,7 @@ function TitleMessage() {
               options={{
                 strings: [
                   "FullStack Web Developer",
-                  "Frontend Developer",
+                  "Animal Lover",
                   "Physiotherapist",
                 ],
                 autoStart: true,

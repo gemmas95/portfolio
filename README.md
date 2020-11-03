@@ -14,6 +14,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - <a src="https://www.npmjs.com/package/@merc/react-timeline">React time-line</a>
 
+- <a src="https://www.npmjs.com/package/react-particles-js">Particles.js - React Component</a>
+
 ## Sources
 
 - <a href='https://react-bootstrap.github.io/getting-started/introduction/'>React Bootstrap</a>

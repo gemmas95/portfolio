@@ -1,4 +1,4 @@
-.little_black_and_white_logo {
+.little_logo {
   width: 40px;
   /* filter: grayscale(100%) brightness(90%); */
 }
@@ -8,6 +8,6 @@
   display: inline;
   margin: 5px;
 }
-span {
+.bold {
   font-weight: bold;
 }

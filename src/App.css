@@ -24,3 +24,6 @@ hr {
   height: 100%;
   z-index: 1;
 }
+.contact__background {
+  background-color: #101018f8;
+}
