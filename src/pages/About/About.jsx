@@ -16,7 +16,7 @@ function About() {
           <Row className="pt-3 pb-5 align-items-center">
             {/* Profile Pic */}
             <Col xs={12} md={6}>
-              <Row className="justify-content-center mb-2 mr-2">
+              <Row className="justify-content-center mb-2 mr-2  ml-2">
                 <Image
                   className="profile justify-content-end"
                   alt="profile"
