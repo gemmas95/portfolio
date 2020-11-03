@@ -13,5 +13,9 @@
 }
 
 .bg__light {
-  background-color: rgb(239, 240, 240);
+  background: linear-gradient(
+    rgba(239, 240, 240, 1) 0%,
+    rgba(239, 240, 240, 1) 87%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }

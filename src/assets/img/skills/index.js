@@ -18,7 +18,7 @@ import L_MYSQL from "./mysql.svg";
 import L_GIT from "./git-icon.svg";
 import L_HEROKU from "./heroku.svg";
 import L_FIREBASE from "./firebase.svg";
-// import L_GITHUB_PAGES from "./github.svg";
+import L_GITHUB_PAGES from "./github.svg";
 import L_JAVASCRIPT from "./javascript.svg";
 import L_TYPESCRIPT from "./typescript.svg";
 // import L_PYTHON from "./python.svg";
@@ -44,6 +44,7 @@ export {
   L_NODE_JS,
   L_EXPRESS,
   L_MONGODB,
+  L_GITHUB_PAGES,
   L_MYSQL,
   L_GIT,
   L_HEROKU,

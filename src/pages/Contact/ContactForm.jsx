@@ -20,7 +20,7 @@ function ContactForm() {
                 rel="noopener noreferrer"
               >
                 <Button variant="outline-danger" title="gemma1030@gmail.com">
-                  <i className="fas fa-envelope-square"></i>Email me
+                  <i className="fas fa-envelope-square"></i> Email me
                 </Button>
               </a>
             </div>

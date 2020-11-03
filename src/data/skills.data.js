@@ -127,12 +127,12 @@ export const skills = {
       imgSrc: L_IMG.L_FIREBASE,
       skillName: "Firebase",
     },
-    /*     {
+    {
       link: "https://pages.github.com/",
       imgAltText: "GitHub Pages",
-      imgSrc: L_GITHUB_PAGES,
+      imgSrc: L_IMG.L_GITHUB_PAGES,
       skillName: "GitHub Pages",
-    }, */
+    },
   ],
   programmingLanguages: [
     {
