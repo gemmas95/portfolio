@@ -33,8 +33,28 @@ function ContextAwareToggle({ children, eventKey, callback }) {
   );
 }
 function Projects() {
+  let randomColor;
+  function getColor(nameLink) {
+    switch (nameLink) {
+      case "GitHub":
+        randomColor = "dark";
+        break;
+      case "Watch Video":
+        randomColor = "primary";
+        break;
+      case "Testing":
+        randomColor = "success";
+        break;
+      case "Live Demo":
+        randomColor = "danger";
+        break;
+      default:
+        randomColor = "info";
+        break;
+    }
+  }
   return (
-    <div className="pt-3 pb-3" id="projects">
+    <div className="pt-3 pb-3 bg__light" id="projects">
       <h1 className="text-center">Projects</h1>
       <div className="justify-content-center d-flex flex-wrap align-items-center">
         <Fade left cascade>
@@ -76,13 +96,19 @@ function Projects() {
                         })}
                       </ul>
                       <div className="d-flex justify-content-center">
-                        {Object.keys(project.links).map((key, i) => (
-                          <a href={`${project.links[key]}`} key={i}>
-                            <Button className="m-2" variant="outline-success">
-                              {key}
-                            </Button>
-                          </a>
-                        ))}
+                        {Object.keys(project.links).map((key, i) => {
+                          getColor(key);
+                          return (
+                            <a href={`${project.links[key]}`} key={i}>
+                              <Button
+                                className="m-2"
+                                variant={`outline-${randomColor}`}
+                              >
+                                {key}
+                              </Button>
+                            </a>
+                          );
+                        })}
                       </div>
                     </Card.Body>
                   </Accordion.Collapse>

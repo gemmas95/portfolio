@@ -1,16 +1,18 @@
-# Getting Started with Create React App
+# Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my personal portfolio.
 
 ## Libraries
 
 - <a src="https://www.npmjs.com/package/react-bootstrap">React Bootstrap (& Bootstrap)</a>
+
 - <a src="https://www.npmjs.com/package/typewriter-effect">Typewriter-effect</a>
+
 - <a src="https://www.npmjs.com/package/styled-components">Styled-components</a>
 
 - <a src="https://www.npmjs.com/package/react-parallax">React-parallax</a>
 
-- <a src="https://www.npmjs.com/package/react-reveal">React reveal</a>
+- <a src="https://www.npmjs.com/package/react-reveal">React reveal | Fade</a>
 
 - <a src="https://www.npmjs.com/package/@merc/react-timeline">React time-line</a>
 

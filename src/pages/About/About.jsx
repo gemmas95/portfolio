@@ -33,13 +33,10 @@ function About() {
                 Hi there! I am <strong> &nbsp; Gemma Sanz Rabadán</strong>
                 <br /> A passionate developer and a Physiotherapist, born in
                 Spain. I am a Full Stack Web Developer with React.js, Flux &
-                Redux, Node.js, and MongoDB as my tech stack.
-                <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Odit dignissimos molestias quidem porro, in quasi at nostrum
-                officiis!
-                <br />
-                Harum eveniet minima quo dignissimos est eligendi optio velit
-                unde accusantium. Repellendus.
+                Redux, Node.js, and MongoDB as my favorite tech stack.
+                <br />I decided to change my life and switch from physical
+                therapy to web development, I am passionate about helping
+                people. I like challenges and growing as part of a team.
               </Row>
               <Row>
                 {/* Buttons */}
