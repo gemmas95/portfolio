@@ -1,6 +1,8 @@
 # Portfolio
 
-This is my personal portfolio.
+This is my personal portfolio where you can find my tech stack and my most important projects.
+
+There's a live demo: https://gemmas95.github.io/portfolio/
 
 ## Libraries
 
@@ -25,3 +27,17 @@ This is my personal portfolio.
   - <a src="https://react-bootstrap.github.io/components/navbar/">Navbar</a>
 
   - <a src="https://react-bootstrap.github.io/components/carousel/">Carousel</a>
+
+## Setup
+
+To run this project:
+
+```
+npm start
+```
+
+To deploy the project:
+
+```
+npm deploy
+```
