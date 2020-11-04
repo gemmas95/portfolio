@@ -37,5 +37,5 @@ npm start
 To deploy the project:
 
 ```
-npm deploy
+npm run deploy
 ```
