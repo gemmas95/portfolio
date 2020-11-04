@@ -14,7 +14,7 @@ import TitleMessage from "./components/TitleMessage/TitleMessage";
 import About from "./pages/About/About";
 import Skills from "./pages/Skills/Skills";
 import Projects from "./pages/Projects/Projects";
-import ContactForm from "./pages/Contact/ContactForm";
+import ContactMe from "./pages/Contact/ContactMe";
 import Footer from "./components/Footer/Footer";
 
 const App = () => {
@@ -40,7 +40,7 @@ const App = () => {
       <Projects />
       <hr />
       <Container className="container-box rounded">
-        <ContactForm />
+        <ContactMe />
       </Container>
       <Footer />
     </div>

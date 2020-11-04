@@ -4,9 +4,9 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-import "./ContactForm.css";
+import "./ContactMe.css";
 
-function ContactForm() {
+function ContactMe() {
   return (
     <div id="contact">
       <h1 className="pt-3 text-center font-details-b pb-3">Contact me</h1>
@@ -54,4 +54,4 @@ function ContactForm() {
     </div>
   );
 }
-export default ContactForm;
+export default ContactMe;
