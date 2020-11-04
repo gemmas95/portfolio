@@ -2,6 +2,11 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 // import Slide1 from "../../assets/img/carousel/slide1.webp";
 import Slide2 from "../../assets/img/carousel/slide2.webp";
+
+import Img1 from "../../assets/img/carousel/img1_plus.jpg";
+
+import Img2 from "../../assets/img/carousel/img2_plus2.jpg";
+
 import Slide3 from "../../assets/img/carousel/slide3.webp";
 import ScrollDown from "../ScrollDown/ScrollDown";
 import Slide4 from "../../assets/img/carousel/slide4.jpeg";
@@ -27,14 +32,14 @@ function MyCarrousel() {
         <Carousel.Item>
           <img
             className="d-block w-100 custom-img"
-            src={Slide2}
+            src={Img2}
             alt="Third slide"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100 custom-img"
-            src={Slide3}
+            src={Img1}
             alt="Third slide"
           />
         </Carousel.Item>
