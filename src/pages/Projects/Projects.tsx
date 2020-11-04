@@ -3,7 +3,7 @@ import { useAccordionToggle } from "react-bootstrap/AccordionToggle";
 import AccordionContext from "react-bootstrap/AccordionContext";
 import Button from "react-bootstrap/Button";
 import { projectsList } from "../../data/projects.data";
-import Fade from "react-reveal/Fade";
+import { Flip } from "react-awesome-reveal";
 
 // import I_CALCULATOR from "../../assets/img/projects/previews/calculator_preview.png";
 
@@ -12,7 +12,7 @@ import Card from "react-bootstrap/Card";
 
 import "./Projects.css";
 
-function ContextAwareToggle({ children, eventKey, callback }) {
+function ContextAwareToggle({ children, eventKey, callback }: any) {
   const currentEventKey = useContext(AccordionContext);
 
   const decoratedOnClick = useAccordionToggle(
@@ -33,8 +33,8 @@ function ContextAwareToggle({ children, eventKey, callback }) {
   );
 }
 function Projects() {
-  let randomColor;
-  function getColor(nameLink) {
+  let randomColor: string;
+  function getColor(nameLink: string) {
     switch (nameLink) {
       case "GitHub":
         randomColor = "dark";
@@ -57,8 +57,8 @@ function Projects() {
     <div className="pt-3 pb-3 bg__light" id="projects">
       <h1 className="text-center">Projects</h1>
       <div className="justify-content-center d-flex flex-wrap align-items-center">
-        <Fade left cascade>
-          {projectsList.map((project, index) => {
+        <Flip cascade direction="vertical">
+          {projectsList.map((project: any, index) => {
             return (
               <Accordion defaultActiveKey="1" key={index}>
                 <Card
@@ -86,7 +86,7 @@ function Projects() {
                     <Card.Body>
                       <span className="bold">Tech Stack:</span>
                       <ul className="p-1 d-flex justify-content-center align-items-center flex-wrap">
-                        {project.tech_stack.map((tech, index) => {
+                        {project.tech_stack.map((tech: any, index: number) => {
                           return (
                             <li className="list_no_dot" key={`tech_${index}`}>
                               <img
@@ -119,7 +119,7 @@ function Projects() {
               </Accordion>
             );
           })}
-        </Fade>
+        </Flip>
       </div>
     </div>
   );

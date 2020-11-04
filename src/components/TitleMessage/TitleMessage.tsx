@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Typewriter from "typewriter-effect";
+// import Typewriter from "typewriter-effect";
+import ReactTypingEffect from "react-typing-effect";
 
 const MyTitleMessage = styled.h1`
   position: absolute;
@@ -44,7 +45,7 @@ function TitleMessage() {
             </span>
           </div>
           <div className="sub">
-            <Typewriter
+            {/*           <Typewriter
               options={{
                 strings: [
                   "FullStack Web Developer",
@@ -54,6 +55,13 @@ function TitleMessage() {
                 autoStart: true,
                 loop: true,
               }}
+            /> */}
+            <ReactTypingEffect
+              text={[
+                "FullStack Web Developer",
+                "Animal Lover",
+                "Physiotherapist",
+              ]}
             />
           </div>
         </div>
