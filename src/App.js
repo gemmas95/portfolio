@@ -17,31 +17,28 @@ import Projects from "./pages/Projects/Projects";
 import ContactMe from "./pages/Contact/ContactMe";
 import Footer from "./components/Footer/Footer";
 
+import Header from "./pages/Header/Header";
+
 const App = () => {
   return (
     <div className="mainContainer">
       <MyNavbar />
+      {/* <Header particlesOptions={particlesOptions} /> */}
       <MyCarrousel />
       <Particles
         className="particles particles-box"
         params={particlesOptions}
       />
       <TitleMessage />
-      <div>
-        <Container className="container-box rounded">
-          <Fade duration={2000}>
-            <About />
-          </Fade>
-        </Container>
-        {/* </Parallax> */}
-      </div>
+      <Container className="container-box rounded">
+        <Fade duration={2000}>
+          <About />
+        </Fade>
+      </Container>
       <Skills />
-
       <Projects />
       <hr />
-      <Container className="container-box rounded">
-        <ContactMe />
-      </Container>
+      <ContactMe />
       <Footer />
     </div>
   );

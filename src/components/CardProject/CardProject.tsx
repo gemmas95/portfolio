@@ -22,9 +22,13 @@ function ContextAwareToggle({ children, eventKey, callback }: any) {
     <button
       type="button"
       style={{
-        backgroundColor: isCurrentEventKey ? "white" : "palevioletred",
+        backgroundColor: isCurrentEventKey ? "white" : "darkturquoise",
+        // backgroundColor: isCurrentEventKey ? "white" : "palevioletred",
+
         color: isCurrentEventKey ? "black" : "white",
-        border: "2px solid palevioletred",
+        border: "2px solid darkturquoise",
+        // border: "2px solid palevioletred",
+
         borderRadius: 3,
       }}
       onClick={decoratedOnClick}
@@ -78,7 +82,7 @@ const CardProject = ({ project, index }: any) => {
         <div className="d-flex justify-content-center mb-4">
           <ContextAwareToggle eventKey="0">Show more!</ContextAwareToggle>
         </div>
-        <Accordion.Collapse eventKey="0">
+        <Accordion.Collapse eventKey="0" className="backgroung__color">
           <Card.Body>
             <span className="bold">Tech Stack:</span>
             <ul className="p-1 d-flex justify-content-center align-items-center flex-wrap">
