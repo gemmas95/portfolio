@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
+
 // import { Parallax } from "react-parallax";
 import Container from "react-bootstrap/Container";
 import Particles from "react-particles-js";

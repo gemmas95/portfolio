@@ -25,7 +25,12 @@ function ContextAwareToggle({ children, eventKey, callback }: any) {
   return (
     <button
       type="button"
-      style={{ backgroundColor: isCurrentEventKey ? "pink" : "lavender" }}
+      style={{
+        backgroundColor: isCurrentEventKey ? "white" : "palevioletred",
+        color: isCurrentEventKey ? "black" : "white",
+        border: "2px solid palevioletred",
+        borderRadius: 3,
+      }}
       onClick={decoratedOnClick}
     >
       {children}
@@ -57,7 +62,7 @@ function Projects() {
     <div className="pt-3 pb-3 bg__light" id="projects">
       <h1 className="text-center">Projects</h1>
       <div className="justify-content-center d-flex flex-wrap align-items-center">
-        <Flip cascade direction="vertical">
+        <Flip duration={1000} cascade direction="vertical">
           {projectsList.map((project: any, index) => {
             return (
               <Accordion defaultActiveKey="1" key={index}>

@@ -45,23 +45,14 @@ function TitleMessage() {
             </span>
           </div>
           <div className="sub">
-            {/*           <Typewriter
-              options={{
-                strings: [
-                  "FullStack Web Developer",
-                  "Animal Lover",
-                  "Physiotherapist",
-                ],
-                autoStart: true,
-                loop: true,
-              }}
-            /> */}
             <ReactTypingEffect
               text={[
                 "FullStack Web Developer",
                 "Animal Lover",
                 "Physiotherapist",
               ]}
+              typingDelay={1000}
+              eraseSpeed={150}
             />
           </div>
         </div>
