@@ -6,9 +6,7 @@ import Button from "react-bootstrap/Button";
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
 
-import { IProject, ILinks } from "../../common/project.model";
-
-import "../../pages/Projects/Projects.css";
+import "./CardAlternativeStyle.css";
 
 function ContextAwareToggle({ children, eventKey, callback }: any) {
   const currentEventKey = useContext(AccordionContext);
@@ -37,14 +35,7 @@ function ContextAwareToggle({ children, eventKey, callback }: any) {
 }
 
 const CardProject = ({ project, index }: any) => {
-  /*   enum IRandomColor {
-    dark = "dark",
-    primary = "primary",
-    success = "success",
-    danger = "danger",
-  } */
   let randomColor: string;
-
   function getColor(nameLink: string) {
     switch (nameLink) {
       case "GitHub":
@@ -65,34 +56,34 @@ const CardProject = ({ project, index }: any) => {
     }
   }
   return (
-    <Accordion defaultActiveKey="1" key={index}>
-      <Card style={{ maxWidth: "25em" }} className="focus mb-2 m-5 p-2">
-        <Card.Header className="text-center">{project.title}</Card.Header>
-        <Card.Img
-          variant="top"
-          height="200px"
-          src={project.imgSrc}
-          alt={project.imgAltText}
-        />
-        <Card.Body className="">
-          <Card.Text>{project.description}</Card.Text>
-        </Card.Body>
-        <div className="d-flex justify-content-center mb-4">
-          <ContextAwareToggle eventKey="0">Show more!</ContextAwareToggle>
-        </div>
-        <Accordion.Collapse eventKey="0">
-          <Card.Body>
-            <span className="bold">Tech Stack:</span>
-            <ul className="p-1 d-flex justify-content-center align-items-center flex-wrap">
-              {project.tech_stack.map((tech: any, index: number) => {
-                return (
-                  <li className="list_no_dot" key={`tech_${index}`}>
-                    <img src={tech} alt="tech" className="little_logo" />
-                  </li>
-                );
-              })}
-            </ul>
-            <div className="d-flex justify-content-center">
+    <Accordion defaultActiveKey="1" key={index} className="maincardstyle">
+      <Card style={{ maxWidth: "25em" }} className="cardstyle">
+        <div className="contentstyle">
+          <div
+            className="backgroundImage"
+            style={{
+              backgroundImage: `${project.imgAltText}`,
+            }}
+          ></div>
+          {/* <img src={project.imgSrc} alt={project.imgAltText} /> */}
+          <div className="h2titlestyle">
+            <h2>{project.title}</h2>
+            <p>{project.description}</p>
+          </div>
+          <div className="hoverdisplay">
+            <div>
+              <span className="bold">Tech Stack:</span>
+              <ul className="p-1 d-flex justify-content-center align-items-center flex-wrap">
+                {project.tech_stack.map((tech: any, index: number) => {
+                  return (
+                    <li className="list_no_dot" key={`tech_${index}`}>
+                      <img src={tech} alt="tech" className="little_logo" />
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className="buttonbtnstyle">
               {Object.keys(project.links).map((key, i) => {
                 getColor(key);
                 return (
@@ -104,8 +95,8 @@ const CardProject = ({ project, index }: any) => {
                 );
               })}
             </div>
-          </Card.Body>
-        </Accordion.Collapse>
+          </div>
+        </div>
       </Card>
     </Accordion>
   );

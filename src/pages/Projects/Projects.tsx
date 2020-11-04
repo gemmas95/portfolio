@@ -3,6 +3,8 @@ import { Flip } from "react-awesome-reveal";
 
 import { projectsList } from "../../data/projects.data";
 import CardProject from "../../components/CardProject/CardProject";
+import CardAlternativeStyle from "../../components/CardProject/CardAlternativeStyle";
+import { IProject } from "../../common/project.model";
 
 import "./Projects.css";
 
@@ -12,7 +14,7 @@ function Projects() {
       <h1 className="text-center">Projects</h1>
       <div className="justify-content-center d-flex flex-wrap align-items-center">
         <Flip duration={1000} cascade direction="vertical">
-          {projectsList.map((project: any, index) => {
+          {projectsList.map((project: IProject, index: number) => {
             return <CardProject project={project} index={index} />;
           })}
         </Flip>

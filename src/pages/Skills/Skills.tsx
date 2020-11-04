@@ -8,6 +8,8 @@ import Image from "react-bootstrap/Image";
 import { skills } from "../../data/skills.data";
 import "./Skills.css";
 
+import { ISkill } from "../../common/skills.model";
+
 const Skills = () => {
   return (
     <div className="pt-3 pb-3 bg__blue" id="skills">
@@ -26,7 +28,7 @@ const Skills = () => {
                 </Card.Title>
                 <hr />
                 <Card.Text className="card-text d-flex justify-content-start flex-column">
-                  {skills.frontend.map((skill, index) => (
+                  {skills.frontend.map((skill: ISkill, index: number) => (
                     <span className="p-2" key={index}>
                       <a
                         className="text-dark text-decoration-none"
