@@ -6,9 +6,7 @@ import Button from "react-bootstrap/Button";
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
 
-import { IProject, ILinks } from "../../common/project.model";
-
-import "../../pages/Projects/Projects.css";
+import "./CardProject.css";
 
 function ContextAwareToggle({ children, eventKey, callback }: any) {
   const currentEventKey = useContext(AccordionContext);
