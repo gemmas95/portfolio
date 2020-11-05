@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 
 import "./ContactMe.css";
 
-function ContactMe() {
+const ContactMe: React.FC = () => {
   return (
     <div id="contact">
       <Container className="container-box rounded">
@@ -56,5 +56,5 @@ function ContactMe() {
       </Container>
     </div>
   );
-}
+};
 export default ContactMe;

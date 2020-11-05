@@ -19,7 +19,7 @@ const MyScroll = styled.div`
   }
 `;
 
-function ScrollDown() {
+const ScrollDown: React.FC = () => {
   return (
     <MyScroll>
       <div className="turn">
@@ -27,6 +27,6 @@ function ScrollDown() {
       </div>
     </MyScroll>
   );
-}
+};
 
 export default ScrollDown;

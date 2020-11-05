@@ -1,5 +1,10 @@
 .nav__theme {
-  background-color: #101018f8;
+  background-color: transparent;
   font-size: 20px;
   width: inherit;
+  transition: ease-out 0.4s;
+}
+
+.nav__theme.active {
+  background-color: #101018f8;
 }

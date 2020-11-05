@@ -6,9 +6,22 @@ import Button from "react-bootstrap/Button";
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
 
+import { IProject } from "../../common/project.model";
+
 import "./CardProject.css";
 
-function ContextAwareToggle({ children, eventKey, callback }: any) {
+// Toogle button logic
+interface ContextToggleProps {
+  children?: string;
+  eventKey: string;
+  callback?: any;
+}
+
+const ContextAwareToggle: React.FC<ContextToggleProps> = ({
+  children,
+  eventKey,
+  callback,
+}) => {
   const currentEventKey = useContext(AccordionContext);
 
   const decoratedOnClick = useAccordionToggle(
@@ -36,9 +49,15 @@ function ContextAwareToggle({ children, eventKey, callback }: any) {
       {children}
     </button>
   );
+};
+
+// CardProject component logic
+interface CardProps {
+  project: IProject;
+  index: number;
 }
 
-const CardProject = ({ project, index }: any) => {
+const CardProject: React.FC<CardProps> = ({ project, index }) => {
   /*   enum IRandomColor {
     dark = "dark",
     primary = "primary",
@@ -95,7 +114,7 @@ const CardProject = ({ project, index }: any) => {
               })}
             </ul>
             <div className="d-flex justify-content-center">
-              {Object.keys(project.links).map((key, i) => {
+              {Object.keys(project.links).map((key: string, i: number) => {
                 getColor(key);
                 return (
                   <a href={`${project.links[key]}`} key={i}>

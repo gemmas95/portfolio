@@ -13,7 +13,7 @@ import Slide4 from "../../assets/img/carousel/slide4.jpeg";
 
 import "./MyCarrousel.css";
 
-function MyCarrousel() {
+const MyCarrousel: React.FC = () => {
   return (
     <div id="home">
       <Carousel
@@ -47,6 +47,6 @@ function MyCarrousel() {
       <ScrollDown />
     </div>
   );
-}
+};
 
 export default MyCarrousel;

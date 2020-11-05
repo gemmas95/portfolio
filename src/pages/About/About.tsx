@@ -7,7 +7,7 @@ import Profile from "../../assets/img/profile/profile.jpeg";
 import Button from "react-bootstrap/Button";
 import "./About.css";
 
-function About() {
+const About: React.FC = () => {
   return (
     <div id="about">
       <div className="about">
@@ -76,5 +76,5 @@ function About() {
       </div>
     </div>
   );
-}
+};
 export default About;

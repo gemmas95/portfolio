@@ -1,15 +1,25 @@
-import React from "react";
+import React, { FC, useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import "./MyNavbar.css";
 
-function MyNavbar() {
+const MyNavbar: FC = () => {
+  const [navbar, setNavbar] = useState<boolean>(false);
+
+  const changeBackground = () => {
+    window.scrollY >= 630 ? setNavbar(true) : setNavbar(false);
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
   return (
     <Navbar
       fixed="top"
       collapseOnSelect
       expand="md"
-      className="nav__theme justify-content-between"
+      className={
+        navbar ? "nav__theme active justify-content-between" : "nav__theme"
+      }
       variant="dark"
     >
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -25,6 +35,6 @@ function MyNavbar() {
       </Navbar.Collapse>
     </Navbar>
   );
-}
+};
 
 export default MyNavbar;

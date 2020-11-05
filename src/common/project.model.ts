@@ -1,5 +1,5 @@
 export interface IProject {
-  links: ILinks;
+  links: ILinks | any;
   imgAltText: string;
   imgSrc: string;
   title: string;

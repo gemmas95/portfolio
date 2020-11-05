@@ -31,7 +31,7 @@ const App = () => {
       />
       <TitleMessage />
       <Container className="container-box rounded">
-        <Fade duration={2000}>
+        <Fade duration={2000} triggerOnce>
           <About />
         </Fade>
       </Container>

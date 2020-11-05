@@ -32,7 +32,7 @@ const MyTitleMessage = styled.h1`
   }
 `;
 
-function TitleMessage() {
+const TitleMessage: React.FC = () => {
   return (
     <MyTitleMessage>
       <div className="titleMessage">
@@ -59,6 +59,6 @@ function TitleMessage() {
       </div>
     </MyTitleMessage>
   );
-}
+};
 
 export default TitleMessage;

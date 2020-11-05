@@ -11,7 +11,7 @@ const Div = styled.div`
   padding-bottom: 0.9rem;
 `;
 
-function Footer() {
+const Footer: React.FC = () => {
   return <Div>@ Gemma Sanz Rabadán {new Date().getFullYear()}</Div>;
-}
+};
 export default Footer;

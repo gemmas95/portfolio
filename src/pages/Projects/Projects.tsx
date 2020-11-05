@@ -18,19 +18,19 @@ const Div = styled.div`
   padding-top: 1rem;
 `;
 
-function Projects() {
+const Projects: React.FC = () => {
   return (
     <Div id="projects">
       <h1 className="text-center">Projects</h1>
       <div className="justify-content-center d-flex flex-wrap align-items-center">
         <Flip duration={1000} cascade direction="vertical" triggerOnce>
-          {projectsList.map((project: IProject, index: number) => {
+          {projectsList.map((project: IProject, index: number): object => {
             return <CardProject project={project} index={index} />;
           })}
         </Flip>
       </div>
     </Div>
   );
-}
+};
 
 export default Projects;
