@@ -58,12 +58,6 @@ interface CardProps {
 }
 
 const CardProject: React.FC<CardProps> = ({ project, index }) => {
-  /*   enum IRandomColor {
-    dark = "dark",
-    primary = "primary",
-    success = "success",
-    danger = "danger",
-  } */
   let randomColor: string;
 
   function getColor(nameLink: string) {

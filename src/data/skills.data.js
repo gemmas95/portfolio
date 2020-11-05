@@ -168,16 +168,16 @@ export const skills = {
       skillName: "PostgreSQL",
     }, */
     {
-      link: "https://www.mysql.com/",
-      imgAltText: "MySQL",
-      imgSrc: L_IMG.L_MYSQL,
-      skillName: "MySQL",
-    },
-    {
       link: "https://www.mongodb.com/",
       imgAltText: "MongoDB",
       imgSrc: L_IMG.L_MONGODB,
       skillName: "MongoDB",
+    },
+    {
+      link: "https://www.mysql.com/",
+      imgAltText: "MySQL",
+      imgSrc: L_IMG.L_MYSQL,
+      skillName: "MySQL",
     },
   ],
   testing: [

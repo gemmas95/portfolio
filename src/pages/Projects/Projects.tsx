@@ -25,7 +25,7 @@ const Projects: React.FC = () => {
       <div className="justify-content-center d-flex flex-wrap align-items-center">
         <Flip duration={1000} cascade direction="vertical" triggerOnce>
           {projectsList.map((project: IProject, index: number): object => {
-            return <CardProject project={project} index={index} />;
+            return <CardProject project={project} index={index} key={index} />;
           })}
         </Flip>
       </div>
