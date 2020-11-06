@@ -1,0 +1,35 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea,
+label {
+  margin: 5px 5px 5px 5px;
+}
+textarea {
+  min-height: 100px;
+  margin-bottom: 20px;
+}
+
+.button_green {
+  background-color: #00ced1;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: fit-content;
+  align-self: center;
+}
+.button_green:disabled {
+  background-color: #cecece;
+}
+
+.send__success {
+  color: #57a773;
+  text-align: center;
+}
+
+.send__fail {
+  color: #ee6352;
+  text-align: center;
+}
