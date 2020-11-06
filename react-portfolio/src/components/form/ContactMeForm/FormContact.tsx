@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import useForm from "../useForm";
+import Axios from "axios";
 
 import "./FormContact.css";
 
@@ -12,6 +13,22 @@ const FormContact: React.FC = () => {
     console.log(values);
     values.disabled = true;
     values.sendSuccessful = true;
+
+    Axios.post("http://localhost:3003/api/email", values)
+      .then((res) => {
+        if (res.data.success) {
+          values.disabled = false;
+          values.sendSuccessful = true;
+        } else {
+          values.disabled = false;
+          values.sendSuccessful = false;
+        }
+      })
+      .catch((err) => {
+        values.disabled = false;
+        values.sendSuccessful = false;
+        console.log(err);
+      });
   }
 
   // useEffect(() => {}, values);
