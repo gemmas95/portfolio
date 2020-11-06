@@ -29,7 +29,7 @@ app.use((req, res, next) => {
 const emailRouter = require("./src/routes/emailRouter")();
 
 app.get("/api", (req, res) => {
-  res.send("API Status: Running");
+  res.send("API Status: Running Successfully!");
 });
 
 app.use("/api/email", emailRouter);
