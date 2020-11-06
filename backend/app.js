@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const express = require("express");
 const debug = require("debug")("app");
 const bodyParser = require("body-parser");
