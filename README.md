@@ -6,6 +6,8 @@ There's a live demo: https://gemmas95.github.io/portfolio/
 
 ## Libraries
 
+In Frontend:
+
 - <a src="https://www.npmjs.com/package/react-bootstrap">React Bootstrap (& Bootstrap)</a>
 
 - <a src="https://www.npmjs.com/package/react-typing-effect">react-typing-effect</a>
@@ -18,9 +20,15 @@ There's a live demo: https://gemmas95.github.io/portfolio/
 
 - <a src="https://www.npmjs.com/package/react-particles-js">Particles.js - React Component</a>
 
+In Backend:
+
+-# <a src="https://www.npmjs.com/package/@sendgrid/mail">@sendgrid</a>
+
+- <a src="https://nodemailer.com/about/">Nodemailer</a>
+
 ## Sources
 
-- <a href='https://react-bootstrap.github.io/getting-started/introduction/'>React Bootstrap</a>
+- <a href='https://react-bootstrap.github.io/getting-started/introduction/'>Sendgrid/mail</a>
 
   - <a src="https://react-bootstrap.github.io/components/navbar/">Navbar</a>
 
