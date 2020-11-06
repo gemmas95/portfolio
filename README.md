@@ -22,7 +22,9 @@ In Frontend:
 
 In Backend:
 
-- <a src="https://www.npmjs.com/package/@sendgrid/mail">Particles.js - React Component</a>
+-# <a src="https://www.npmjs.com/package/@sendgrid/mail">@sendgrid</a>
+
+- <a src="https://nodemailer.com/about/">Nodemailer</a>
 
 ## Sources
 

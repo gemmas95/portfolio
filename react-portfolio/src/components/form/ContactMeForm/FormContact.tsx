@@ -14,7 +14,7 @@ const FormContact: React.FC = () => {
     values.disabled = true;
     values.sendSuccessful = true;
 
-    Axios.post("http://localhost:3003/api/email", values)
+    Axios.post("/api/email", values)
       .then((res) => {
         if (res.data.success) {
           values.disabled = false;

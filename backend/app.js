@@ -1,10 +1,12 @@
 /* eslint-disable no-console */
+require("dotenv").config();
+
 const express = require("express");
 const debug = require("debug")("app");
 const bodyParser = require("body-parser");
+const nodemailer = require("nodemailer");
 
 const cors = require("cors");
-const sendGrid = require("@sendgrid/mail");
 
 const app = express();
 
@@ -28,28 +30,30 @@ app.get("/api", (req, res) => {
 });
 
 app.post("/api/email", (req, res) => {
-  sendGrid.setApiKey(
-    "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"
-  );
-  const msg = {
-    to: "gemma1030@gmail.com",
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.PASSWORD,
+      pass: process.env.EMAIL,
+    },
+  });
+
+  const mailOptions = {
     from: req.body.email,
-    subject: "Website Portfolio Contact",
+    to: "gemma1030@gmail.com",
+    subject: `PORTFOLIO MAIL: ${req.body.email}, ${req.body.name}`,
     text: req.body.message,
   };
 
-  sendGrid
-    .send(msg)
-    .then((result) => {
-      res.status(200).json({ success: true });
-      res.json(result);
-    })
-    .catch((err) => {
-      console.log(`error: ${err}`);
-      res.status(401).json({ success: false });
-    });
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(info, "Email sent successfully!");
+      res.status(200);
+    }
+  });
 });
-// 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
 
 app.listen(PORT, () => {
   debug(`Running on port ${PORT}`);
