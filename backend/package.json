@@ -25,7 +25,7 @@
       "node_modules/**/node_modules"
     ],
     "env": {
-      "PORT": 3003
+      "PORT": 3002
     }
   },
   "devDependencies": {}
