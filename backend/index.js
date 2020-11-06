@@ -4,7 +4,6 @@ require("dotenv").config();
 const express = require("express");
 const debug = require("debug")("app");
 const bodyParser = require("body-parser");
-const nodemailer = require("nodemailer");
 
 const cors = require("cors");
 
@@ -25,10 +24,16 @@ app.use((req, res, next) => {
   next();
 });
 
+// Routes configuration
+
+const emailRouter = require("./src/routes/emailRouter")();
+
 app.get("/api", (req, res) => {
   res.send("API Status: Running");
 });
 
+app.use("/api/email", emailRouter);
+/* 
 app.post("/api/email", (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -53,7 +58,7 @@ app.post("/api/email", (req, res) => {
       res.status(200);
     }
   });
-});
+}); */
 
 app.listen(PORT, () => {
   debug(`Running on port ${PORT}`);
