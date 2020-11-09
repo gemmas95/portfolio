@@ -9,6 +9,10 @@ hr {
   );
 }
 
+section {
+  padding: 20vh 0px;
+}
+
 .container-box {
   width: 80%;
   background-color: transparent;
