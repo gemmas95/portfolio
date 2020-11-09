@@ -88,13 +88,13 @@
 
 /* Style the back side */
 .flip-card-back {
-  background-color: #c5124b8c;
-  /*   background: rgb(0, 206, 209);
+  /* background-color: #c5124b8c; */
+  background: rgb(0, 206, 209);
   background: radial-gradient(
     circle,
     rgba(0, 206, 209, 1) 0%,
     rgba(204, 240, 243, 1) 100%
-  ); */
+  );
   color: white;
   transform: rotateY(180deg);
 }

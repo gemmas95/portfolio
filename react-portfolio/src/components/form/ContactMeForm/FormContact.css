@@ -19,6 +19,7 @@ textarea {
   border-radius: 5px;
   width: fit-content;
   align-self: center;
+  color: white;
 }
 .button_green:disabled {
   background-color: #cecece;

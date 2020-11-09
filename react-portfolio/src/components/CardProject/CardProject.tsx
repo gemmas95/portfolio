@@ -42,7 +42,12 @@ const CardProject: React.FC<CardProps> = ({ project, index }) => {
       >
         <div className="flip-card-front">
           <h3 className="text-center">{project.title}</h3>
-          <img height="200px" src={project.imgSrc} alt={project.imgAltText} />
+          <img
+            height="200px"
+            src={project.imgSrc}
+            alt={project.imgAltText}
+            title={project.imgAltText}
+          />
           <div className="">
             <p>{project.description}</p>
           </div>
