@@ -13,7 +13,7 @@ import { ISkill } from "../../common/skills.model";
 
 const Skills: React.FC = () => {
   return (
-    <div className="pt-3 pb-3 bg__blue" id="skills">
+    <section className="bg__blue" id="skills">
       <Zoom duration={2000} triggerOnce>
         <h1 className="text-center font-details-b pb-4 white__title">
           Tech Skills
@@ -247,7 +247,7 @@ const Skills: React.FC = () => {
           </Row>
         </CardDeck>
       </Zoom>
-    </div>
+    </section>
   );
 };
 
