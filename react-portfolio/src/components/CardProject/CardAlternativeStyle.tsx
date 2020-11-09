@@ -57,20 +57,24 @@ const CardProject = ({ project, index }: any) => {
   }
   return (
     <Accordion defaultActiveKey="1" key={index} className="maincardstyle">
-      <Card style={{ maxWidth: "25em" }} className="cardstyle">
-        <div className="contentstyle">
-          <div
+      <Card
+        // style={{ maxWidth: "25em" }}
+        className="flip-card"
+      >
+        <div className="flip-card-inner">
+          {/*         <div
             className="backgroundImage"
             style={{
               backgroundImage: `${project.imgAltText}`,
             }}
-          ></div>
-          {/* <img src={project.imgSrc} alt={project.imgAltText} /> */}
-          <div className="h2titlestyle">
+          ></div> */}
+          <div className="flip-card-front">
             <h2>{project.title}</h2>
+            <img src={project.imgSrc} alt={project.imgAltText} />
             <p>{project.description}</p>
           </div>
-          <div className="hoverdisplay">
+          {/* <img src={project.imgSrc} alt={project.imgAltText} /> */}
+          <div className="flip-card-back">
             <div>
               <span className="bold">Tech Stack:</span>
               <ul className="p-1 d-flex justify-content-center align-items-center flex-wrap">

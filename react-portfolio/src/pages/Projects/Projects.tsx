@@ -3,18 +3,16 @@ import { Flip } from "react-awesome-reveal";
 
 import { projectsList } from "../../data/projects.data";
 import CardProject from "../../components/CardProject/CardProject";
-import CardAlternativeStyle from "../../components/CardProject/CardAlternativeStyle";
 import { IProject } from "../../common/project.model";
 
 import styled from "styled-components";
 
-const Div = styled.div`
+const Div = styled.section`
   background: linear-gradient(
     rgba(239, 240, 240, 1) 0%,
     rgba(239, 240, 240, 1) 87%,
     rgba(255, 255, 255, 1) 100%
   );
-  padding: 20vh 0px;
 `;
 
 const Projects: React.FC = () => {

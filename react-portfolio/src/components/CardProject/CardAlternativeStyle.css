@@ -1,7 +1,74 @@
-.maincardstyle {
+/* .maincardstyle {
   box-sizing: border-box;
   display: grid;
   place-items: center;
+}
+ */
+.flip-card {
+  background-color: transparent;
+  margin: 2rem;
+  padding: 0rem;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  display: flex;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 10px;
+  padding: 15px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.flip-card-front > h3,
+.flip-card-front > p,
+.flip-card-front > img {
+  margin: 15px 0px;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.flip-card-front > img {
+  width: inherit;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background: rgb(0, 206, 209);
+  background: radial-gradient(
+    circle,
+    rgba(0, 206, 209, 1) 0%,
+    rgba(204, 240, 243, 1) 100%
+  );
+  color: white;
+  transform: rotateY(180deg);
 }
 
 .cardstyle {
