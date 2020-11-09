@@ -9,7 +9,7 @@ import "./About.css";
 
 const About: React.FC = () => {
   return (
-    <div id="about">
+    <section id="about">
       <div className="about">
         <h1 className="pt-3 text-center font-details-b pb-3">About me</h1>
         <Container>
@@ -75,7 +75,7 @@ const About: React.FC = () => {
           </Row>
         </Container>
       </div>
-    </div>
+    </section>
   );
 };
 export default About;

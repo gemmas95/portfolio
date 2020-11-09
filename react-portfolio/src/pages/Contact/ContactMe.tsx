@@ -10,7 +10,7 @@ import "./ContactMe.css";
 
 const ContactMe: React.FC = () => {
   return (
-    <div id="contact">
+    <section id="contact">
       <Container className="container-box rounded">
         <h1 className="pt-3 text-center font-details-b pb-3">Let's talk</h1>
         {/* <Jumbotron className="contact-jumbotron"> */}
@@ -37,7 +37,7 @@ const ContactMe: React.FC = () => {
         {/* </Jumbotron> */}
         <FormContact />
       </Container>
-    </div>
+    </section>
   );
 };
 export default ContactMe;

@@ -14,8 +14,7 @@ const Div = styled.div`
     rgba(239, 240, 240, 1) 87%,
     rgba(255, 255, 255, 1) 100%
   );
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  padding: 20vh 0px;
 `;
 
 const Projects: React.FC = () => {
