@@ -1,5 +1,7 @@
 # Portfolio
 
+*This is not the repository of my actual portfolio https://gemmasanz.netlify.app/ , the code was separated in two repositories that are private.
+
 This is my personal portfolio where you can find my tech stack and my most important projects.
 
 There's a live demo: https://gemmas95.github.io/portfolio/
